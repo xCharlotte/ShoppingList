@@ -43,8 +43,8 @@
   </div>
 </div>
 
-{{-- <example-component></example-component> --}}
-<edit-product-component></edit-product-component>
+<example-component></example-component>
+{{-- <edit-product-component></edit-product-component> --}}
 @endsection
 
 
