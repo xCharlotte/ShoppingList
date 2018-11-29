@@ -10,20 +10,14 @@ class ProductController extends Controller
 {
 
   public function index(ShoppingList $shopping_list) {
-    $products = Product::all();
+    Product::where('shopping_list_id', $shopping_list->id)->get();
     return view('lists.show', compact('shopping_lists', 'products'));
-
-    // $products = Product::where('added', false)->orderBy('id', 'DEC')->get();
-    // $added_product = Product::where('added', true)->get();
-    // return view('products', compact('products', '$added_product'));
   }
   
   public function edit() {
     
   }
   
-  
-
   public function store(Request $request, $id) {
     $this->validate($request, [
       'name' => 'required|max:20'
@@ -35,6 +29,18 @@ class ProductController extends Controller
     $product->save();
     
     return redirect('/lists/'.$id)->with('success', 'succesvol toegevoegd');
+  }
+  
+  public function update(Request $request, $shopping_list, $product) {
+    $this->validate($request, [
+      'name' => 'required|max:20'
+    ]);
+  
+    $product = Product::find($product);
+    $product->name = $request->name;
+    $product->save();
+  
+    return $product;
   }
   
   public function destroy($shopping_list, $id) {
