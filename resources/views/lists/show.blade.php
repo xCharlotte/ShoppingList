@@ -27,30 +27,28 @@
 
           
             <div class="card-text">
-              
-                @foreach($category_list as $category)
-                  <h3>{{$category->name}}</h3>
-                  <table class="table table-sm">
-                    @foreach($category->products as $product)
-                      <tr>
-                        <td class="col">{{ $product->name }}</td>
-                        <td>
-                          <a href="{{ route('shopping_list_edit', ['shopping_list' => $product->id]) }}"
-                          class="btn btn-sm btn-secondary">
-                            <i class="far fa-edit"></i>
-                          </a>
-                        </td>
-                        <td>
-                          <form action="{{ route('product_delete', ['shopping_list' => $shopping_list->id, 'product' => $product->id]) }}" method="post">
-                             {{csrf_field()}}
-                             <input name="_method" type="hidden" value="DELETE">
-                             <button class="btn btn-sm btn-secondary" type="submit"><i class="far fa-trash-alt"></i></button>
-                           </form>
-                         </td>
-                      </tr>
-                    @endforeach
-                  </table>
+              <table class="table table-sm">
+                @foreach($products as $product)
+                  <tr>
+                    <td><counter-component></counter-component></td>
+                    <td class="col">{{ $product->name }}</td>
+                    <td>{{ $product->category->name }}</td>
+                    <td>
+                      <a href="{{ route('shopping_list_edit', ['shopping_list' => $product->id]) }}"
+                      class="btn btn-sm btn-secondary">
+                        <i class="far fa-edit"></i>
+                      </a>
+                    </td>
+                    <td>
+                      <form action="{{ route('product_delete', ['shopping_list' => $shopping_list->id, 'product' => $product->id]) }}" method="post">
+                         {{csrf_field()}}
+                         <input name="_method" type="hidden" value="DELETE">
+                         <button class="btn btn-sm btn-secondary" type="submit"><i class="far fa-trash-alt"></i></button>
+                       </form>
+                     </td>
+                  </tr>
                 @endforeach
+              </table>
               <div class="col">
                 <a href="{{ url('/') }}">Ga terug naar lijsten</a>
               </div>
@@ -61,5 +59,5 @@
   </div>
 </div>
 
-<edit-product-component></edit-product-component>
+
 @endsection
