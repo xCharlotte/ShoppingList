@@ -43,11 +43,6 @@
   </div>
 </div>
 
-<<<<<<< HEAD
-=======
-<example-component></example-component>
-{{-- <edit-product-component></edit-product-component> --}}
->>>>>>> 586ad8c3f386a2df2df04ee1f7893aa85ef5bd43
 @endsection
 
 
