@@ -13896,17 +13896,26 @@ module.exports = __webpack_require__(43);
  */
 
 __webpack_require__(13);
+<<<<<<< HEAD
 
 window.Vue = __webpack_require__(36);
 
+=======
+Vue.config.devtools = true;
+window.Vue = __webpack_require__(36);
+>>>>>>> 586ad8c3f386a2df2df04ee1f7893aa85ef5bd43
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+<<<<<<< HEAD
 Vue.component('counter-component', __webpack_require__(39));
 Vue.component('edit-component', __webpack_require__(48));
+=======
+Vue.component('example-component', __webpack_require__(39));
+>>>>>>> 586ad8c3f386a2df2df04ee1f7893aa85ef5bd43
 
 var app = new Vue({
   el: '#app'
@@ -47209,7 +47218,11 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
+<<<<<<< HEAD
 Component.options.__file = "resources/js/components/CounterComponent.vue"
+=======
+Component.options.__file = "resources/js/components/ExampleComponent.vue"
+>>>>>>> 586ad8c3f386a2df2df04ee1f7893aa85ef5bd43
 
 /* hot reload */
 if (false) {(function () {
@@ -47218,9 +47231,15 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
+<<<<<<< HEAD
     hotAPI.createRecord("data-v-54f75c4c", Component.options)
   } else {
     hotAPI.reload("data-v-54f75c4c", Component.options)
+=======
+    hotAPI.createRecord("data-v-299e239e", Component.options)
+  } else {
+    hotAPI.reload("data-v-299e239e", Component.options)
+>>>>>>> 586ad8c3f386a2df2df04ee1f7893aa85ef5bd43
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -47351,6 +47370,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+<<<<<<< HEAD
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -47847,6 +47867,10 @@ module.exports = function listToStyles (parentId, list) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+=======
+//
+//
+>>>>>>> 586ad8c3f386a2df2df04ee1f7893aa85ef5bd43
 //
 //
 //
@@ -47857,6 +47881,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
+<<<<<<< HEAD
   mounted: function mounted() {
     console.log('mounted');
     this.shopping_list_id = _.last(window.location.pathname.split('/'));
@@ -47898,12 +47923,22 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 /* 54 */
+=======
+    mounted: function mounted() {
+        console.log('Component mounted.');
+    }
+});
+
+/***/ }),
+/* 42 */
+>>>>>>> 586ad8c3f386a2df2df04ee1f7893aa85ef5bd43
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+<<<<<<< HEAD
   return _c(
     "div",
     { staticClass: "edit-comp" },
@@ -47943,14 +47978,55 @@ var render = function() {
   )
 }
 var staticRenderFns = []
+=======
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container" }, [
+      _c("div", { staticClass: "row justify-content-center" }, [
+        _c("div", { staticClass: "col-md-8" }, [
+          _c("div", { staticClass: "card" }, [
+            _c("div", { staticClass: "card-header" }, [
+              _vm._v("Example Component")
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "card-body" }, [
+              _vm._v(
+                "\n                    I'm an example component.\n                "
+              )
+            ])
+          ])
+        ])
+      ])
+    ])
+  }
+]
+>>>>>>> 586ad8c3f386a2df2df04ee1f7893aa85ef5bd43
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
+<<<<<<< HEAD
     require("vue-hot-reload-api")      .rerender("data-v-ad065790", module.exports)
   }
 }
 
+=======
+    require("vue-hot-reload-api")      .rerender("data-v-299e239e", module.exports)
+  }
+}
+
+/***/ }),
+/* 43 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+>>>>>>> 586ad8c3f386a2df2df04ee1f7893aa85ef5bd43
 /***/ })
 /******/ ]);
