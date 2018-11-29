@@ -20,9 +20,8 @@ class ShoppingListController extends Controller
   public function show(ShoppingList $shopping_list, Product $products) {
     $shopping_list = ShoppingList::find($shopping_list)->first();
     $categories = Category::all();
-    $category_list = Category::with('products')->whereHas('products')->get();
-    $products = Product::where('shopping_list_id', $shopping_list->id)->get();
-    return view('lists.show',compact('shopping_list', 'products', 'categories', 'category_list'));
+    $products = Product::where('shopping_list_id', $shopping_list->id)->orderBy('category_id')->get();
+    return view('lists.show',compact('shopping_list', 'products', 'categories'));
   }
   
   public function store(Request $request) {
